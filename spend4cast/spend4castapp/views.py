@@ -12,3 +12,7 @@ def index(request):
 
 def detail(request, user_id):
     return(HttpResponse("You're lookig at user %s" % user_id))
+
+def home(request):
+    template = loader.get_template('spend4castapp/home.html')
+    return HttpResponse(template.render(request))
